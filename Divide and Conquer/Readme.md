@@ -31,7 +31,15 @@ int binary_search(item_type s[], item_type key, int low, int high) {
   
 }
 ```
+```hamburgers
+###Hamburgers.py
+Problem on the binary  search
+>
+>add graph
+
+```
 ```python
+###Coding
 def canBeMade(count, need, have, price, money):
  """
   count: the number of Hamburgers to be made
