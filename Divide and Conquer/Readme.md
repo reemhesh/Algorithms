@@ -71,7 +71,7 @@ def main():
   #          ^
   # the answer is in low
   while(l < h):
-   mid = l + (h - l) / 2 //it would start rounding towards the higher bound
+   mid = l + (h - l) / 2 #it would start rounding towards the higher bound
     # print(l, h, mid)
     if (canBeMade(mid, need, have, price, money)): l = mid
     else: h = mid - 1
