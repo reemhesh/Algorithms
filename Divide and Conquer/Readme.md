@@ -17,10 +17,10 @@ int binary_search(item_type s[], item_type key, int low, int high) {
        return (-1); /* key not found */
   }
 
-  middle = (low + high) / 2;
+  middle = (low + high) / 2;  
 
   if (s[middle] == key) {
-       return(middle);
+       return(middle);   
   }
   
   if (s[middle] > key) {
@@ -71,7 +71,7 @@ def main():
   #          ^
   # the answer is in low
   while(l < h):
-    mid = (l + h + 1) // 2
+   mid = l + (h - l) / 2 //it would start rounding towards the higher bound
     # print(l, h, mid)
     if (canBeMade(mid, need, have, price, money)): l = mid
     else: h = mid - 1
