@@ -17,7 +17,7 @@ int binary_search(item_type s[], item_type key, int low, int high) {
        return (-1); /* key not found */
   }
 
-  middle = (low + high) / 2;  
+  middle = (low + high) / 2;  #low + (high-low+1) / 2  --or-- low +( high-low) / 2
 
   if (s[middle] == key) {
        return(middle);   
