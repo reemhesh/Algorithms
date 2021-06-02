@@ -36,7 +36,7 @@ int binary_search(item_type s[], item_type key, int low, int high) {
 ### Hamburgers.py
 Problem on the binary  search
 
-> ![graph](https://ibb.co/1G8pKND)
+> 
 
 
 ```python
