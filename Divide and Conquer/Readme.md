@@ -34,7 +34,7 @@ int binary_search(item_type s[], item_type key, int low, int high) {
 
 
 ## Hamburgers.py
- ####method solving in sec
+   method solving in sec
 Problem on the binary  search
 
 |      |  A |  B  |  C  |
@@ -65,7 +65,7 @@ while(l<h)
   else h= mid - 1
   
 ```
-##solve problem by binary_search
+  Solve problem by binary_search
 ```c++
 #include<bits/stdc++.h>
 using namespace std;
@@ -129,7 +129,7 @@ bool binary_search(int mid)
    
  }
 ```
-##comments for solve
+ Comments for solve
 ```explan
 
 //BBBSSC
