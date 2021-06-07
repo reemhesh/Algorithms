@@ -33,7 +33,8 @@ int binary_search(item_type s[], item_type key, int low, int high) {
 ```
 
 
-### Hamburgers.py
+## Hamburgers.py
+ ####method solving in sec
 Problem on the binary  search
 
 |      |  A |  B  |  C  |
@@ -44,14 +45,15 @@ Problem on the binary  search
  ```money
  MONEY
  L -> ---------
-                     |
->                    |
->                    |
->                    --------- <- h
+                   |
+                   |
+                   |
+                    --------- <- h
 ```
 >                  
 ```pseudocode
 Pseucode
+
 bool OK(n)
 for i [1--->3]
 money - = max( (n c1 - h1) p1 , 0  )
@@ -63,7 +65,7 @@ while(l<h)
   else h= mid - 1
   
 ```
--------------------------------
+##solve problem by binary_search
 ```c++
 #include<bits/stdc++.h>
 using namespace std;
@@ -127,6 +129,7 @@ bool binary_search(int mid)
    
  }
 ```
+##comments for solve
 ```explan
 
 //BBBSSC
