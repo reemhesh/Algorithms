@@ -45,11 +45,19 @@ Problem on the binary  search
  ```money
  MONEY
  
- L -> ---------
-                   |
-                   |
-                   |
-                    --------- <- h
+ L -> --------- 
+               |
+               |
+               |
+                --------- <- h
+                    
+ or
+ 
+                ---------- <- h
+               |
+               |
+               |
+ L -> --------- 
 ```
 >                  
 ```pseudocode
