@@ -42,14 +42,16 @@ Problem on the binary  search
 | have | h1 | h2  | h3  |
 |price | p1 | p2  | p3  |
  ```money
- MONEY L -> ---------
+ MONEY
+ L -> ---------
                      |
 >                    |
 >                    |
 >                    --------- <- h
 ```
->  -------------------------                
+>                  
 ```pseudocode
+Pseucode
 bool OK(n)
 for i [1--->3]
 money - = max( (n c1 - h1) p1 , 0  )
@@ -63,6 +65,9 @@ while(l<h)
 ```
 -------------------------------
 ```c++
+#include<bits/stdc++.h>
+using namespace std;
+#define int int64_t
 int b,s,c;
 int p[3];
 int m;
