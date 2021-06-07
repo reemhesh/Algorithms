@@ -44,6 +44,7 @@ Problem on the binary  search
 |price | p1 | p2  | p3  |
  ```money
  MONEY
+ 
  L -> ---------
                    |
                    |
@@ -128,10 +129,8 @@ bool binary_search(int mid)
    return0;
    
  }
-```
- Comments for solve
-```explan
-
+//explaning by comments
+//
 //BBBSSC
 //6 4 1
 //1 2 3
