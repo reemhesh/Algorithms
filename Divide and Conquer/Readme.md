@@ -41,23 +41,18 @@ Problem on the binary  search
 | need | c1 | c2  | c3  |
 | have | h1 | h2  | h3  |
 |price | p1 | p2  | p3  |
- 
+ ```money
  MONEY L -> ---------
                      |
 >                    |
 >                    |
 >                    --------- <- h
-> or              
->                  mid
-                   --------- <-h
-                   |
-                   |
-                   |
->     L ->---------                   
+```
+>  -------------------------                
 ```pseudocode
 bool OK(n)
 for i [1--->3]
-money = mok( (n c1 - h1) p1 , 0  )
+money - = max( (n c1 - h1) p1 , 0  )
 return money > = 0
 
 while(l<h)
@@ -66,46 +61,88 @@ while(l<h)
   else h= mid - 1
   
 ```
-```python
-###Coding
-def canBeMade(count, need, have, price, money):
- """
-  count: the number of Hamburgers to be made
-  need, have, price: arrays of 3 elements
-    the ith element of each corresponds to the ith ingredient and represents
-    1. the needed amount of that ingredient in the Hamburger
-    2. the amount we have of that ingredient
-    3. the price per unit of that ingredient
-  money: the amount of money we can spend
-  """
-  for (needed, present, cost) in zip(need, have, price):
-    m = max((count * needed - present) * cost, 0)
-    if m > money: return False
-    else: money -= m
-  return True
+-------------------------------
+```c++
+int b,s,c;
+int p[3];
+int m;
+int req[] ={0,0,0}
+bool binary_search(int mid)
+{
+  int to[3];
+  for(int i; i<3 ;i++)
+  {
+    to[i] = req[i]+mid;
+   }
+   to[0] - =b;
+   to[1] - =s;
+   to[2] - =c;
+   int cost=0;
+    for(inti;i<3;i++)
+      if(to[0]>0)
+           cost + = to[i] + p[i];
+     if(cost<=m)
+        return true;
+     return false;
+  }
+ } 
+ signed main(){
+ string ss;cin>>ss;
+ for(char i:ss)
+ {
+  if(i=='B')
+     req[0]++;
+   else if(i=='S')
+     req[1]++;
+   else
+     req[2]++;
+   }
+   cin>>b>>s>>c;
+   for(int i=0;i<3;i++)
+     cin>>p[i];
+   cin>>m;
+   int st=0;
+   int en=1e14;
+   int ans=0;
+   while(st<=en)
+   {
+     int mid=st+(en - st)/2;
+     if(binary_search(mid))
+     {
+       ans=mid;
+       st=mid+1;
+     }
+     else
+     {
+       en=mid-1;
+     } 
+   }
+   cout<<ans"\n";
+   return0;
+   
+ }
+```
+```explan
 
-def main():
-  dic = {"B":0, "S":0, "C":0}
-  for i in input(): dic[i] += 1
-  need = list(dic.values())
-  have = [int(v) for v in input().split(' ')]
-  price = [int(v) for v in input().split(' ')]
+//BBBSSC
+//6 4 1
+//1 2 3
+//4
+//
+//recipe:- b-3,s-2,c-1
+//i can make 1 hamburger
+//check for 2
+//b-6 ,s-4, c-2
+//b-6,s-4,c-1+1 (market)
+//remaining money - 1
+//
+//check for 3
+//
+//b-9,s-6,c-3
+//
+//b-3*1, s-2*2 ,c-2*3 = 13
 
-  money = int(input())
 
-  l , h = 0, int(10**15)
-  # ||||||||||__________
-  #          ^
-  # the answer is in low
-  while(l < h):
-   mid = l + (h - l) / 2 #it would start rounding towards the higher bound
-    # print(l, h, mid)
-    if (canBeMade(mid, need, have, price, money)): l = mid
-    else: h = mid - 1
 
-  print(l)
-
-if __name__ == '__main__':
-  main()
 
 ```
