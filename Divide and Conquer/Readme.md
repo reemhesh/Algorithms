@@ -36,12 +36,11 @@ int binary_search(item_type s[], item_type key, int low, int high) {
 ### Hamburgers.py
 Problem on the binary  search
 
-      | A  | B |  C
- need | c1 | c2| c3
- 
- have | h1 | h2| h3
-
- price| p1 | p2| p3
+|      |  A |  B  |  C  |
+| -----| -- | --  | --  |
+| need | c1 | c2  | c3  |
+| have | h1 | h2  | h3  |
+|price | p1 | p2  | p3  |
  
  MONEY L -> ---------
                      |
