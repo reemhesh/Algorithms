@@ -35,10 +35,37 @@ int binary_search(item_type s[], item_type key, int low, int high) {
 
 ### Hamburgers.py
 Problem on the binary  search
+      | A  | B |  C
+ need | c1 | c2| c3
+ -----|----|---|---
+ have | h1 | h2| h3
+ -----|----|---|---
+ price| p1 | p2| p3
+ 
+ MONEY L -> ---------
+                     |
+>                    |
+>                    |
+>                    --------- <- h
+> or              
+>                  mid
+                   --------- <-h
+                   |
+                   |
+                   |
+>     L ->---------                   
+```pseudocode
+bool OK(n)
+for i [1--->3]
+money = mok( (n c1 - h1) p1 , 0  )
+return money > = 0
 
-> 
-
-
+while(l<h)
+ mid = l + (l-h)/2
+  If( OK (mid)) l= mid 
+  else h= mid - 1
+  
+```
 ```python
 ###Coding
 def canBeMade(count, need, have, price, money):
